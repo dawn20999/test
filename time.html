@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var time=document.getElementById('time');
+			showtime();
+			setTimeout(showtime,1000);
+			function showtime(){
+				var data=new Date();
+				var Y=data.getFullYear();
+				var Mo=data.getMonth()+1;
+				var D=data.getDate();
+				var H=data.getHours();
+				var M=data.getMinutes();
+				var S=data.getSeconds();
+				time.innerHTML=Y+'-'+Double(Mo)+'-'+Double(D)+'  '+Double(H)+':'+Double(M)+':'+Double(S);
+				setTimeout(showtime,1000);
+			}
+
+			function Double(n){
+				return n<10 ? '0'+n : ''+n;
+			}
+			
+
+		};
+	</script>
+</head>
+<body>
+	<div id="time"></div>
+	<input type="date" value="选择时间">
+	<input type="week" value="选择周几">
+	<input type="time" value="时间">
+	<input type="datetime-local" value="选择时间">
+	<input type="datetime" value="选择时间">
+	<input type="month" value="选择月">
+</body>
+</html>
