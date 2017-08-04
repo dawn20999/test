@@ -2,39 +2,90 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+	<title>lcalendar</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/LCalendar.css">
+	<script src="js/zepto.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/LCalendar.js"></script>
 	<script>
-		window.onload=function(){
+		$(function(){			
 			var time=document.getElementById('time');
 			showtime();
 			setTimeout(showtime,1000);
-			function showtime(){
-				var data=new Date();
-				var Y=data.getFullYear();
-				var Mo=data.getMonth()+1;
-				var D=data.getDate();
-				var H=data.getHours();
-				var M=data.getMinutes();
-				var S=data.getSeconds();
-				time.innerHTML=Y+'-'+Double(Mo)+'-'+Double(D)+'  '+Double(H)+':'+Double(M)+':'+Double(S);
-				setTimeout(showtime,1000);
-			}
 
-			function Double(n){
-				return n<10 ? '0'+n : ''+n;
-			}
-			
+         	var calendar = new LCalendar();
+		    calendar.init({
+		        'trigger': '#demo1', //标签id
+		        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+		        'minDate': '1900-1-1', //最小日期
+		        'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + (new Date().getDate()-1), //最大日期
+		    });
 
-		};
+
+			var now=new Date();
+            var yesterday=now.getFullYear()+'/'+toDub(now.getMonth()+1)+'/'+toDub(now.getDate()-1);
+            $(".date").val(yesterday);
+   			// 前一天
+            $("#arror_left").on('touchend',function(){
+                if ($(".date").val() != "") {
+                    $(".date").val(addDate($(".date").val(), -1));
+                }
+                else {
+                    $(".date").val(yesterday);
+                }
+            });
+            // 后一天
+            $("#arror_right").on('touchend',function(){
+                if ($(".date").val() != "") {
+                    if($(".date").val() != yesterday){
+                        $(".date").val(addDate($(".date").val(), 1)); 
+                    }else{
+                       return;
+                    }
+                    
+                }
+                else { 
+                    $(".date").val(yesterday);
+                }
+            });
+		});
+		function addDate(date,days){   
+            var d=new Date(date);   
+            d.setDate(d.getDate()+days);   
+            var month=d.getMonth()+1;   
+            var day = d.getDate();  
+             
+            var val = d.getFullYear()+"/"+toDub(month)+"/"+toDub(day);   
+            return val;  
+        }
+		function showtime(){
+			var data=new Date();
+			var Y=data.getFullYear();
+			var Mo=data.getMonth()+1;
+			var D=data.getDate();
+			var H=data.getHours();
+			var M=data.getMinutes();
+			var S=data.getSeconds();
+			time.innerHTML=Y+'-'+toDub(Mo)+'-'+toDub(D)+'  '+toDub(H)+':'+toDub(M)+':'+toDub(S);
+			setTimeout(showtime,1000);
+		}
+		function toDub(n){
+			return n<10 ? '0'+n : ''+n;
+		} 
 	</script>
 </head>
 <body>
 	<div id="time"></div>
-	<input type="date" value="选择时间">
-	<input type="week" value="选择周几">
-	<input type="time" value="时间">
-	<input type="datetime-local" value="选择时间">
-	<input type="datetime" value="选择时间">
-	<input type="month" value="选择月">
+
+	<span id="arror_left">previous</span>
+	<input id="demo1" class="date fl" type="text" />		
+	<span id="arror_right">next</span>
 </body>
 </html>
