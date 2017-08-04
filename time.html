@@ -9,7 +9,7 @@
     <meta name="format-detection" content="telephone=no,email=no"/>
     <meta name="apple-touch-fullscreen" content="yes"/>
 	<title>lcalendar</title>
-	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/wapstyle.css">
 	<link rel="stylesheet" href="css/LCalendar.css">
 	<script src="js/zepto.js"></script>
 	<script src="js/base.js"></script>
@@ -50,13 +50,13 @@
                     }else{
                        return;
                     }
-                    
                 }
                 else { 
                     $(".date").val(yesterday);
                 }
             });
 		});
+		// 增加天数
 		function addDate(date,days){   
             var d=new Date(date);   
             d.setDate(d.getDate()+days);   
@@ -66,6 +66,7 @@
             var val = d.getFullYear()+"/"+toDub(month)+"/"+toDub(day);   
             return val;  
         }
+        // 计算时间
 		function showtime(){
 			var data=new Date();
 			var Y=data.getFullYear();
@@ -86,7 +87,7 @@
 	<div id="time"></div>
 
 	<span id="arror_left">previous</span>
-	<input id="demo1" class="date fl" type="text" />		
+	<input id="demo1" class="date fl" type="text" readonly="readonly" />		
 	<span id="arror_right">next</span>
 </body>
 </html>
