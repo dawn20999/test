@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.mask{
+		-webkit-mask:-webkit-linear-gradient(top,#debb47  50%,rgba(0,0,0,0));
+		-webkit-mask: -webkit-gradient(linear, 0% 50%, 0% 100%, from(#debb47), to(rgba(36, 142, 36, 0)));
+	}
+		.inmask{
+			width:500px;
+			height: 500px;
+			background:url(images/1.jpg) no-repeat;
+			-webkit-mask:-webkit-linear-gradient(bottom,#debb47  50%,rgba(0,0,0,0));
+			-webkit-mask: -webkit-gradient(linear, 0% 50%, 0% 0%, from(#debb47), to(rgba(36, 142, 36, 0)));
+		}
+
+		h3 {
+			color: transparent;
+			-webkit-text-stroke: 1px red;
+			-webkit-mask: -webkit-gradient(linear, 0% 50%, 0% 0%, from(#debb47), to(rgba(36, 142, 36, 0)));
+		}
+	</style>
+</head>
+<body>
+	<div class="mask">
+		<div class="inmask"></div>
+	</div>
+	<h3>是连接佛啊</h3>
+</body>
+</html>
