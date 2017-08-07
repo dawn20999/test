@@ -694,7 +694,7 @@ window.LCalendar = (function() {
                 date_mm = date_mm > 9 ? date_mm : '0' + date_mm;
                 var date_dd = parseInt(Math.round(_self.gearDate.querySelector(".date_dd").getAttribute("val"))) + 1;
                 date_dd = date_dd > 9 ? date_dd : '0' + date_dd;
-                _self.trigger.value = (date_yy % passY + _self.minY) + "-" + date_mm + "-" + date_dd;
+                _self.trigger.value = (date_yy % passY + _self.minY) + "/" + date_mm + "/" + date_dd;
                 closeMobileCalendar(e);
             }
             //年月确认
@@ -703,7 +703,7 @@ window.LCalendar = (function() {
                 var date_yy = parseInt(Math.round(_self.gearDate.querySelector(".date_yy").getAttribute("val")));
                 var date_mm = parseInt(Math.round(_self.gearDate.querySelector(".date_mm").getAttribute("val"))) + 1;
                 date_mm = date_mm > 9 ? date_mm : '0' + date_mm;
-                _self.trigger.value = (date_yy % passY + _self.minY) + "-" + date_mm;
+                _self.trigger.value = (date_yy % passY + _self.minY) + "/" + date_mm;
                 closeMobileCalendar(e);
             }
             //日期时间确认
@@ -718,7 +718,7 @@ window.LCalendar = (function() {
                 time_hh = time_hh > 9 ? time_hh : '0' + time_hh;
                 var time_mm = parseInt(Math.round(_self.gearDate.querySelector(".time_mm").getAttribute("val")));
                 time_mm = time_mm > 9 ? time_mm : '0' + time_mm;
-                _self.trigger.value = (date_yy % passY + _self.minY) + "-" + date_mm + "-" + date_dd + " " + (time_hh.length < 2 ? "0" : "") + time_hh + (time_mm.length < 2 ? ":0" : ":") + time_mm;
+                _self.trigger.value = (date_yy % passY + _self.minY) + "/" + date_mm + "/" + date_dd + " " + (time_hh.length < 2 ? "0" : "") + time_hh + (time_mm.length < 2 ? ":0" : ":") + time_mm;
                 closeMobileCalendar(e);
             }
             //时间确认

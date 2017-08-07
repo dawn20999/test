@@ -41,7 +41,7 @@
 
 // ====================================
 //     滑屏时阻止touchend事件冒泡
-    stopTouchendPropagationAfterScroll();
+    // stopTouchendPropagationAfterScroll();
     function stopTouchendPropagationAfterScroll(){
         var flag = false;
         window.addEventListener('touchmove', function(ev){
