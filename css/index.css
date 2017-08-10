@@ -1,0 +1,370 @@
+html,body{
+    background: #f5f5f5;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+body{
+    font-size: 0.32rem;  /*1rem=100px*/
+}
+/*公共部分样式*/
+.bg{
+    width:100%;
+    height: 100%;
+    background:#f5f5f5;
+    overflow-x:hidden;
+    position:relative;
+}
+.wrap{
+    position:relative;
+    width: 100%;
+    height: 3.9rem;
+    display: block;
+    background: url(../images/kaoqin_bg_blue.png) no-repeat;
+    background-size: 100% 3.9rem;
+    z-index: 0;
+}
+.content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    z-index: 10;
+    overflow: hidden;
+}
+.head{
+    text-align:center;
+}
+.head img{
+    width: 1.08rem;
+    height:1.08rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+}
+.head .company{
+    font-size: 0.28rem;
+    color:#fff;
+    font-weight: bold;
+    padding-bottom: 0.26rem;
+}
+.morning {
+    position: relative;
+    /*margin-bottom: 0.65rem;*/
+    height: auto;
+}
+.morning .left{
+    width: 0.2rem;
+    height: auto;
+    padding-bottom: 0.2rem;
+    background: #fff;
+    -webkit-border-top-right-radius: 0.2rem;
+    -moz-border-top-right-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    -webkit-border-bottom-right-radius: 0.2rem;
+    -moz-border-bottom-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+.morning .right{
+    width: 0.2rem;
+    height: auto;
+    padding-bottom: 0.2rem;
+    background: #fff;
+    -webkit-border-top-left-radius: 0.2rem;
+    -moz-border-top-left-radius: 0.2rem;
+    border-top-left-radius: 0.2rem;
+    -webkit-border-bottom-left-radius: 0.2rem;
+    -moz-border-bottom-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+.morning .center{
+    position: relative;
+    height: auto;
+    margin:0 0.3rem;
+    padding-bottom: 0.2rem;
+    background-color: #fff;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    -webkit-box-shadow: 0px 6px 14px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 6px 14px rgba(0,0,0,0.1);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.1);
+}
+.morning .center h2{
+    padding-bottom: 0.3rem;
+}
+.morning .center .today{
+    font-size: 0.26rem;
+    line-height: 0.26rem;
+    color:#596266;
+    font-weight: 600;
+    padding:0.24rem 0 0 0.34rem;
+}
+.morning .center .sale span{
+    font-size: 0.22rem;
+    line-height: 0.22rem;
+    color:#b1c3cc;
+    font-weight: 500;
+    margin-top:0.26rem;
+}
+.morning .center .sale i{
+    display: block;
+    width: 0.12rem;
+    height: 0.18rem;
+    background:url(../images/kaoqin_bangdan_arrow_icon.png) no-repeat;
+    background-size:100% 100%;
+    margin:0.28rem 0.24rem 0 0.1rem;
+
+}
+.morning .advance{
+    padding-bottom: 0.2rem;
+    position: relative;
+}
+.morning .item{
+    text-align:center;
+}
+.morning .item img{
+    width: 1rem;
+    height:1rem;
+    display: block;
+    margin:0 auto;
+    margin-bottom: 0.18rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    -moz-box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+.morning .item p{
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+    color:#000;
+    font-weight: bold;
+    font-style: italic;
+}
+.morning .line{
+    height:0.01rem;
+    background-color: #dcdcdc;
+    margin:0 0.34rem 0.2rem;
+}
+.morning .roll{
+    padding-left:0.34rem;
+    font-size:0.26rem;
+    line-height:0.26rem;
+    color:#596266;
+    font-weight:bold;
+    padding-bottom:0.4rem;
+}
+.morning .loadingParent{
+    text-align: center;
+    height: 3.6rem;
+    padding-bottom:0.52rem;
+    position: relative;
+}
+.morning .c-in{
+    margin-top: 1.06rem;
+    font-size: 0.5rem;
+    color:#596266;
+}
+.morning .process,.morning .process canvas{
+    width: 3.6rem!important;
+    height: 3.6rem!important;
+    margin:0 auto;
+}
+
+.morning .data{
+    width: 100%;
+    font-size:0.22rem;
+    line-height:0.22rem;
+    color:#b1c3cc;
+    text-align: center;
+    display:block;
+    /*padding-bottom: 1rem;*/
+}
+
+.footer{
+    width: 100%;
+    height: 2.4rem;
+    background-color: #fff;
+    position: absolute;
+    margin:0 auto;
+    bottom: 0;
+}
+.footer .swiper-container{
+    height: 100%;
+}
+.footer .title{
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    color:#596266;
+    font-weight: bold;
+    text-align:center;
+    padding:0.26rem 0 0.2rem;
+}
+.footer .state{
+    font-size: 0.26rem;
+    line-height: 0.26rem;
+    color:#596266;
+    font-weight: bold;
+}
+.footer .number{
+    display:block;
+    font-size: 0.26rem;
+    line-height: 0.26rem;
+    color:#b1c3cc;
+    padding-left: 0.16rem;
+}
+.footer .barbox{
+    margin-top:0.07rem;
+    padding-left:0.2rem;
+}
+.footer .outer-therm {
+    margin: 0;
+}
+.footer .attend{
+    padding-bottom: 0.5rem;
+}
+.footer .state{
+    padding-left: 0.6rem;
+}
+.footer .align{
+    padding-left:0.2rem;
+}
+.footer .swiper-pagination-bullet{
+    background: #b1c3cc;
+    opacity: 1;
+}
+.footer .swiper-pagination-bullet-active {
+    background: #7a868d;
+}
+.footer .loadingParent1{
+    height:0.8rem;
+    margin-bottom:0.08rem;
+}
+#canvas_canvas1,#canvas_canvas2{
+    width: 0.8rem!important;
+    height: 0.8rem!important;
+}
+.footer .department{
+    color:#596266;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    padding-bottom:0.08rem;
+    font-weight:bold;
+}
+.footer .daily{
+    padding-bottom:0;
+}
+.footer .dailyCont{
+    text-align: center;
+}
+.footer .dailyCont .number{
+    padding-left:0;
+}
+.footer .swiper-pagination{
+    bottom:0.1rem;
+}
+
+
+
+.enterpriseBody{
+    background:#fff;
+}
+.enterprise{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.enterprise .header{
+    height: 0.95rem;
+    padding-top: 0.6rem;
+    position: relative;
+    float: left;
+    left: 50%;
+}
+.enterprise .headCompany{
+    text-align: center;
+    position: relative;
+    float: left;
+    left: -50%;
+}
+.enterprise .company{
+    font-size: 0.2rem;
+    color:#fff;
+    height: 0.33rem;
+    line-height: 0.33rem;
+    padding-top: 0.03rem;
+    background:url(../images/center.png) repeat-x;
+    max-width: 6rem;
+    margin:0 auto;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+.enterprise .headCompany span{
+    width: 0.16rem;
+    height: 0.36rem;
+}
+.enterprise .headCompany .left{
+    background:url(../images/left.png) no-repeat;
+    background-size: 100% 100%;
+}
+.enterprise .headCompany .right{
+    background:url(../images/right.png) no-repeat;
+    background-size: 100% 100%;
+}
+.enterprise .grid{
+    width: 100%;
+}
+.enterprise .gridCont{
+    border-top: 1px solid #ebebeb;
+}
+.enterprise .item{
+    width:33%;
+    text-align: center;
+    float: left;
+    border-right: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top:28%;
+    position: relative;
+}
+.enterprise .itemBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.enterprise .itemBox i{
+    width: 0.6rem;
+    height: 0.6rem;
+    display: inline-block;
+    margin-top: 0.37rem;
+}
+.enterprise .td_icon{
+    background:url(../images/today.png) no-repeat;
+    background-size: 100% 100%;
+}
+.enterprise .pm_icon{
+    background:url(../images/kaoqinpaiming_icon.png) no-repeat;
+    background-size: 100% 100%;
+}
+.enterprise .tj_icon{
+    background:url(../images/kaoqintongji_icon.png) no-repeat;
+    background-size: 100% 100%;
+}
+.enterprise .item_r{
+    border-right: none;
+    width: 34%;
+}
+.enterprise .item_b{
+    border-bottom: none;
+}
+.enterprise .itemTitle{
+    font-size: 0.22rem;
+    color:#6d7b7e;
+    padding-top: 0.1rem;
+}
