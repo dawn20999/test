@@ -20,7 +20,7 @@ html { width: 100%;}
 body {
 	font-family: "Helvetica Neue","Helvetica","Arial","Microsoft YaHei","微软雅黑","sans-serif";
 	width: 100%;
-	font-size:0.32rem; /*font-size:16px;当尺寸为20px时转换为20*2/100=0.4rem*/
+	font-size:0.32rem; /*font-size:16px;当尺寸为20px时转换为20*2/100=0.4rem--翟*/
 	color: #333; 
 }
 h1, h2, h3, h4, h5, h6, strong, i{ 
