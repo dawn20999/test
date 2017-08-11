@@ -28,8 +28,30 @@
 				<div class="my-pangination">
 					<ul class="my-pagination-ul"></ul>
 				</div>
+				<div class="swiper-wrapper">
+					<div class="swiper-slider"></div>
+					<div class="swiper-slider"></div>
+				</div>
 			</div>
 		</section>
 	</section>
+	<script> 
+var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.my-pagination-ul',
+    paginationClickable: true,
+    paginationBulletRender: function (index, className) {
+        switch (index) {
+          case 0:
+            name='周排名';
+          break;
+          case 1: 
+            name='月排名';
+          break;
+          default: name='';
+        }
+        return '<li class="' + className + '">' + name + '</li>';
+    }
+})
+</script>
 </body>
 </html>
