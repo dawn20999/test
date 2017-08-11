@@ -294,16 +294,25 @@ body{
 .enterprise .company{
     font-size: 0.2rem;
     color:#fff;
+    background:#229ee6;
+    max-width: 6rem;
+    margin:0 auto;
+    padding:0.015rem 0.2rem 0.01rem;
+    border-radius: 20px;
+}
+/*.enterprise .company{
+    font-size: 0.2rem;
+    color:#fff;
     height: 0.36rem;
     line-height: 0.36rem;
     padding-top: 0.02rem;
-    /*background:url(../images/center.png) repeat-x;*/
+    background:url(../images/center.png) repeat-x;
     background:blue;
     max-width: 6rem;
     margin:0 auto;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
-}
+}*/
 .enterprise .headCompany span{
     width: 0.16rem;
     height: 0.36rem;
