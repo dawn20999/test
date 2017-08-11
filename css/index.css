@@ -298,18 +298,6 @@ body{
     padding:0.05rem 0.25rem 0.05rem;
     border-radius: 20px;
 }
-.enterprise .headCompany span{
-    width: 0.16rem;
-    height: 0.36rem;
-}
-.enterprise .headCompany .left{
-    background:url(../images/left.png) no-repeat;
-    background-size: 100% 100%;
-}
-.enterprise .headCompany .right{
-    background:url(../images/right.png) no-repeat;
-    background-size: 100% 100%;
-}
 .enterprise .grid{
     width: 100%;
 }
