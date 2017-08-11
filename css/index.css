@@ -288,14 +288,17 @@ body{
     position: relative;
     float: left;
     left: -50%;
+    height: 0.36rem;
+    overflow: hidden;
 }
 .enterprise .company{
     font-size: 0.2rem;
     color:#fff;
-    height: 0.28rem;
-    line-height: 0.2rem;
-    padding-top: 0.08rem;
-    background:url(../images/center.png) repeat-x;
+    /*height: 0.36rem;*/
+    line-height: 0.36rem;
+    /*padding-top: 0.03rem;*/
+    /*background:url(../images/center.png) repeat-x;*/
+    background:blue;
     max-width: 6rem;
     margin:0 auto;
     padding-left: 0.2rem;
