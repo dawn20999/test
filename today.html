@@ -143,15 +143,14 @@
 </section>
 	<script>
 		$(function () {
-			var EmployeeId = GetQueryString("EmployeeId");
-			var OrganizationId = GetQueryString("OrganizationId");
-			var Tim = GetQueryString("Tim");
+//			var EmployeeId = GetQueryString("EmployeeId");
+//			var OrganizationId = GetQueryString("OrganizationId");
+//			var Tim = GetQueryString("Tim");
 			$.ajax({
 				type: "POST",
 				async: false,
 				dataType: "json",
-				url: "/Handlers/AppWapHandler.ashx?handlerType=GetMyRanking&EmployeeId=" + EmployeeId + "&OrganizationId=" +
-				OrganizationId + "&Tim=" + Tim + "",
+				url: "/Handlers/AppWapHandler.ashx?handlerType=GetMyRanking&EmployeeId=249&OrganizationId=1&Tim=2017-08-14" ,
 				data: "",
 				success: function (data) {
 					var strhtml='';
