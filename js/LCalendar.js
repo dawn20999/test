@@ -702,9 +702,12 @@ window.LCalendar = (function() {
                 var passY = _self.maxY - _self.minY + 1;
                 var date_yy = parseInt(Math.round(_self.gearDate.querySelector(".date_yy").getAttribute("val")));
                 var date_mm = parseInt(Math.round(_self.gearDate.querySelector(".date_mm").getAttribute("val"))) + 1;
-                date_mm = date_mm > 9 ? date_mm : '0' + date_mm;
-                _self.trigger.value = (date_yy % passY + _self.minY) + "/" + date_mm;
+                // date_mm = date_mm > 9 ? date_mm : '0' + date_mm;  //LCG
+                _self.trigger.value =date_mm+'月';   //LCG
+                // _self.trigger.value = (date_yy % passY + _self.minY) + "/" + date_mm;    //LCG
                 closeMobileCalendar(e);
+                $(".month").find('i').removeClass('arrow');
+                console.log(date_mm)
             }
             //日期时间确认
             function finishMobileDateTime(e) {

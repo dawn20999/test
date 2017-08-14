@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/index.css">
 	<script src="js/zepto.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/swiper.min.js"></script>
+	<script src="js/swiper.js"></script>
 	<script src="js/LCalendar.js"></script>
 </head>
 <body>
@@ -27,7 +27,7 @@
 				<span class="myName">王瑞</span>
 			</div>
 			<p class="explain">我的本周累计工时(数据统计截止昨日)</p>
-			<p class="workHours">70<span>小时</span></p>
+			<p class="workHours" id="workHours"></p>
 		</header>
 		<section id="swiper">
 		    <!-- Add Pagination -->
@@ -140,8 +140,12 @@
 		    </div>
 		</section>
 	</section>
-	<script> 
+	<script>
+
 	$(function(){
+
+
+
 
 		var calendar = new LCalendar();
 		calendar.init({
@@ -156,20 +160,32 @@
 		function toDub(n){
 			return n<10 ? '0'+n : ''+n;
 		} 
+		$(".month").on('touchend',function(){
+			$(this).find('i').addClass('arrow');
+		});
 
 
 
 
 	    var swiper = new Swiper('.swiper-container', {
 	        speed: 400,
-	        onSlideChangeStart:function(){
+	        onSlideChangeStart:function(ee){
 	        	$(".swiper-list .active").removeClass('active');
 	        	$(".swiper-list span").eq(swiper.activeIndex).addClass('active');
-	        	console.log(swiper.activeIndex)
-		    	if(swiper.activeIndex==1){
+	        	console.log(ee.activeIndex)
+				var str='';
+		    	if(ee.activeIndex==1){
 		    		// alert('yue')
 	    		console.log('yue')
-		    	}
+					str+=70+'<span>小时</span>';
+					$("#workHours").html(str);
+					$(".month").show();
+		    	}else if(ee.activeIndex==0){
+					str=60+'<span>小时</span>';
+					$("#workHours").html(str);
+					$(".month").hide();
+				}
+//				return;
 	        }
 	    });
 
@@ -177,11 +193,20 @@
 	    	$(".swiper-list .active").removeClass('active');
 	    	$(this).addClass('active');
 	    	swiper.slideTo($(this).parent('li').index());
-	    	console.log($(this))
-	    	if($(this).index()==1){
+	    	console.log($(this).parent('li').index());
+			var str1='';
+
+	    	if($(this).parent('li').index()==1){
 	    		// alert('yue')
-	    		console.log('yue')
-	    	}
+	    		console.log('1111yue')
+				str1+=70+'<span>小时</span>';
+				$("#workHours").html(str1);
+				$(".month").show();
+	    	}else if($(this).parent('li').index()==0){
+				str1=60+'<span>小时</span>';
+				$("#workHours").html(str1);
+				$(".month").hide();
+			}
 	    });
 
 	    $(".month").on('touchend',function(){
@@ -190,6 +215,20 @@
 		
 	});
 
+		function getrankinglist()
+		{
+			//掉接口
+
+          var result={code:1,message:"",value:[{name:"a",time:""},{name:"b",time:""}]};
+			if(result.code==1)
+			{
+				$(result.value).each(function(i,o){
+
+
+				});
+			}
+
+		}
 </script>
 </body>
 </html>
