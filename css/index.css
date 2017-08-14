@@ -395,24 +395,24 @@ body{
     color:#fff;
 }
 .today .number1{
-    width:0.4rem;
-    height: 0.56rem;
+    width:0.6rem;
+    height: 0.6rem;
     background:url(../images/app_no-1.png) no-repeat;
     background-size: 100% 100%;
     margin-top: 0.42rem;
     margin-right: 0.34rem;
 }
 .today .number2{
-    width:0.4rem;
-    height: 0.56rem;
+    width:0.6rem;
+    height: 0.6rem;
     background:url(../images/app_no-2.png) no-repeat;
     background-size: 100% 100%;
     margin-top: 0.42rem;
     margin-right: 0.34rem;
 }
 .today .number3{
-    width:0.4rem;
-    height: 0.56rem;
+    width:0.6rem;
+    height: 0.6rem;
     background:url(../images/app_no-3.png) no-repeat;
     background-size: 100% 100%;
     margin-top: 0.42rem;
@@ -423,6 +423,7 @@ body{
     font-size: 0.3rem;
     font-style: italic;
     margin-right: 0.47rem;
+    padding-left: 0.2rem;
 }
 .today .icon{
     width: 0.8rem;
@@ -464,8 +465,10 @@ body{
 
 /*attendKing.html*/
 .attendKing .header{
+    width: 100%;
     height: 2.34rem;
-    background: #229ee6;
+    background:url(../images/app_kaoqinpaiming_bg@2x.png) no-repeat;
+    background-size: 100% 100%; 
 }
 .attendKing .userName{
     padding-top: 0.05rem;
@@ -500,3 +503,174 @@ body{
 .attendKing .userName{
     
 }
+
+#swiper .swiper-list{
+    display: -webkit-box;
+    display: -moz-box; 
+    display: -webkit-flex;  
+    display: -moz-flex; 
+    display: -ms-flexbox; 
+    display: flex;
+    top:0;
+    bottom: 0;
+    background: #fff;
+    height: 0.8rem;
+}
+.attendKing .swiper-item {
+    text-align: right;
+    line-height: 0.8rem;
+    opacity: 1;
+    background: rgba(255,255,255,0.2);
+    -webkit-flex:1;
+    -webkit-box-flex:1;
+    -moz-flex:1;
+    -ms-flex:1;
+    flex:1;
+    width:100%;
+    height: 0.8rem;
+}
+.attendKing .swiper-list .monthRanking{
+    text-align: left;
+}
+.attendKing .swiper-item span{
+    font-size: 0.3rem;
+    color:#596365;
+}
+.attendKing .swiper-item .month{
+    margin-left: 1rem;
+    padding-left: 0.4rem;
+}
+.attendKing .swiper-item a{
+    font-size: 0.2rem;
+    color:#7b868c;
+}
+.attendKing .swiper-item .date{
+    width: 0.5rem;
+    margin-top: 0.24rem;
+    text-align: right;
+}
+.attendKing .swiper-item .arro{
+    width:0.1rem;
+    height: 0.06rem;
+    background:url(../images/app_kaoqinpaiming_arrow_down@2x.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: 0.04rem;
+    margin-top:0.36rem;
+}
+.attendKing .swiper-item .week{
+    margin-right: 0.65rem;
+    padding-bottom: 0.2rem;
+}
+.attendKing .swiper-item .monthly{
+    margin-left: 0.65rem;
+}
+.attendKing .swiper-item .active {
+    color:#229ee6;
+    border-bottom:2px solid #007aff;
+    padding-bottom: 0.2rem;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-top:0.2rem;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.attendKing .swiperList{
+    width: 100%;
+}
+.attendKing .slidItem{
+    padding:0 0.4rem;
+}
+.attendKing .itemMessage{
+    height: 1.39rem;
+    line-height: 1.39rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+.attendKing .number1{
+    width:0.6rem;
+    height: 0.6rem;
+    background:url(../images/app_no-1.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.42rem;
+    margin-right: 0.34rem;
+}
+.attendKing .number2{
+    width:0.6rem;
+    height: 0.6rem;
+    background:url(../images/app_no-2.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.42rem;
+    margin-right: 0.34rem;
+}
+.attendKing .number3{
+    width:0.6rem;
+    height: 0.6rem;
+    background:url(../images/app_no-3.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.42rem;
+    margin-right: 0.34rem;
+}
+.attendKing .number{
+    color:#78858b;
+    font-size: 0.3rem;
+    font-style: italic;
+    margin-right: 0.47rem;
+    padding-left: 0.2rem;
+}
+.attendKing .icon {
+    width: 0.8rem;
+    height: 0.8rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-top: 0.3rem;
+    position: relative;
+}
+.attendKing .icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.attendKing .name{
+    color:#596266;
+    font-size: 0.3rem;
+    margin-left: 0.3rem;
+}
+.attendKing .time{
+    color:#596266;
+    font-size: 0.24rem;
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+    -webkit-flex:1;
+    -ms-flex:1;
+    flex:1;
+    text-align: right;
+}
+.attendKing .time .small{
+    font-size: 0.2rem;
+}
+.attendKing .listAttend{
+    background:#f5fafd;
+}
+

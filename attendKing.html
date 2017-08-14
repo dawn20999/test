@@ -10,8 +10,14 @@
     <meta name="apple-touch-fullscreen" content="yes"/>
 	<title>考勤排名</title>
 	<link rel="stylesheet" href="css/wapstyle.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/page_style.css">
+	<link rel="stylesheet" href="css/LCalendar.css">
 	<link rel="stylesheet" href="css/index.css">
+	<script src="js/zepto.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/LCalendar.js"></script>
 </head>
 <body>
 	<section class="attendKing">
@@ -23,35 +29,167 @@
 			<p class="explain">我的本周累计工时(数据统计截止昨日)</p>
 			<p class="workHours">70<span>小时</span></p>
 		</header>
-		<section>
-			<div class="swiper-container">
-				<div class="my-pangination">
-					<ul class="my-pagination-ul"></ul>
-				</div>
-				<div class="swiper-wrapper">
-					<div class="swiper-slider"></div>
-					<div class="swiper-slider"></div>
-				</div>
-			</div>
+		<section id="swiper">
+		    <!-- Add Pagination -->
+		    <div class="swiper-tab">
+		    	<ul class="swiper-list">
+		    		<li class="swiper-item">
+		    			<span class="week active">周排名</span>
+		    		</li>
+		    		<li class="swiper-item monthRanking flex">
+		    			<span class="monthly">月排名</span>
+		    			<div class="month flex-1 clearfix">
+		    				<a href="javascript:;" class="fl"><input id="demo1" class="date fl" type="text" readonly="readonly" /><i class="arro fl"></i></a>
+		    				
+		    			</div>
+		    		</li>
+		    	</ul>
+		    </div>
+		    <!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		        	<div class="swiper-slide">
+			        	<ul class="swiperList">
+			        		<li class="slidItem listAttend">
+			        			<div class="itemMessage flex">
+			        				<i class="number1"></i>
+			        				<div class="icon">
+			        					<img src="images/app_TxImg.png">
+			        				</div>
+			        				<p class="name">王瑞</p>
+			        				<span class="time">98<i class="small">小时</i></span>
+			        			</div>
+			        		</li>
+			        		<li class="slidItem">
+			        			<div class="itemMessage flex">
+			        				<i class="number2"></i>
+			        				<div class="icon">
+			        					<img src="images/app_TxImg.png">
+			        				</div>
+			        				<p class="name">王瑞</p>
+			        				<span class="time">98<i class="small">小时</i></span>
+			        			</div>
+			        		</li>
+			        		<li class="slidItem">
+			        			<div class="itemMessage flex">
+			        				<i class="number3"></i>
+			        				<div class="icon">
+			        					<img src="images/app_TxImg.png">
+			        				</div>
+			        				<p class="name">王瑞</p>
+			        				<span class="time">98<i class="small">小时</i></span>
+			        			</div>
+			        		</li>
+			        		<li class="slidItem">
+			        			<div class="itemMessage flex">
+			        				<i class="number">4.</i>
+			        				<div class="icon">
+			        					<img src="images/app_TxImg.png">
+			        				</div>
+			        				<p class="name">王瑞</p>
+			        				<span class="time">98<i class="small">小时</i></span>
+			        			</div>
+			        		</li>
+			        	</ul>
+		            </div>
+		            <div class="swiper-slide">
+			        	<ul class="swiperList">
+			        		<li class="slidItem listAttend">
+			        			<div class="itemMessage flex">
+			        				<i class="number1"></i>
+			        				<div class="icon">
+			        					<img src="images/app_TxImg.png">
+			        				</div>
+			        				<p class="name">王瑞</p>
+			        				<span class="time">98<i class="small">小时</i></span>
+			        			</div>
+			        		</li>
+			        		<li class="slidItem">
+			        			<div class="itemMessage flex">
+			        				<i class="number2"></i>
+			        				<div class="icon">
+			        					<img src="images/app_TxImg.png">
+			        				</div>
+			        				<p class="name">王瑞</p>
+			        				<span class="time">98<i class="small">小时</i></span>
+			        			</div>
+			        		</li>
+			        		<li class="slidItem">
+			        			<div class="itemMessage flex">
+			        				<i class="number3"></i>
+			        				<div class="icon">
+			        					<img src="images/app_TxImg.png">
+			        				</div>
+			        				<p class="name">王瑞</p>
+			        				<span class="time">98<i class="small">小时</i></span>
+			        			</div>
+			        		</li>
+			        		<li class="slidItem">
+			        			<div class="itemMessage flex">
+			        				<i class="number">4.</i>
+			        				<div class="icon">
+			        					<img src="images/app_TxImg.png">
+			        				</div>
+			        				<p class="name">王瑞</p>
+			        				<span class="time">98<i class="small">小时</i></span>
+			        			</div>
+			        		</li>
+			        	</ul>
+		            </div>
+		        </div>
+		    </div>
 		</section>
 	</section>
 	<script> 
-var mySwiper = new Swiper('.swiper-container',{
-    pagination: '.my-pagination-ul',
-    paginationClickable: true,
-    paginationBulletRender: function (index, className) {
-        switch (index) {
-          case 0:
-            name='周排名';
-          break;
-          case 1: 
-            name='月排名';
-          break;
-          default: name='';
-        }
-        return '<li class="' + className + '">' + name + '</li>';
-    }
-})
+	$(function(){
+
+		var calendar = new LCalendar();
+		calendar.init({
+	        'trigger': '#demo1', //标签id
+	        'type': 'ym', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+	        'minDate': '1900-1-1', //最小日期
+	        'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1), //最大日期
+		});
+			var now=new Date();
+            var yesterday=now.getMonth()+1+'月';
+            $(".date").val(yesterday);
+		function toDub(n){
+			return n<10 ? '0'+n : ''+n;
+		} 
+
+
+
+
+	    var swiper = new Swiper('.swiper-container', {
+	        speed: 400,
+	        onSlideChangeStart:function(){
+	        	$(".swiper-list .active").removeClass('active');
+	        	$(".swiper-list span").eq(swiper.activeIndex).addClass('active');
+	        	console.log(swiper.activeIndex)
+		    	if(swiper.activeIndex==1){
+		    		// alert('yue')
+	    		console.log('yue')
+		    	}
+	        }
+	    });
+
+	    $(".swiper-list span").on('touchend',function(){
+	    	$(".swiper-list .active").removeClass('active');
+	    	$(this).addClass('active');
+	    	swiper.slideTo($(this).parent('li').index());
+	    	console.log($(this))
+	    	if($(this).index()==1){
+	    		// alert('yue')
+	    		console.log('yue')
+	    	}
+	    });
+
+	    $(".month").on('touchend',function(){
+	    	console.log(1)
+	    });
+		
+	});
+
 </script>
 </body>
 </html>
