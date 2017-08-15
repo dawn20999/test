@@ -156,38 +156,29 @@
 					var strhtml='';
 					if (data.Code == 1) {
 						var myMessage=data.Value.MyRanking;
-
 						$(data.Value.RankingList).each(function(i,o){
-
 							if(o.Index==1)
 							{
-
 							}
 							else if(o.Index==2)
 							{
-
 							}
 							else if(o.Index==3)
 							{
-
 							}
 							else
 							{
-
 							}
 							if(myMessage.Index==o.Index)
 							{
 								strhtml+='';
-
 							}
 							else {
 								strhtml+='';
 							}
-
 						});
 //						.append();
 //						$('.myMessage')
-
 					} else {
 						alert(data.Message)
 					}
@@ -196,7 +187,6 @@
 					alert(data.responseText);
 				}
 			});
-
 		})
 	</script>
 </body>

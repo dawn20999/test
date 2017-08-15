@@ -516,6 +516,17 @@ body{
     background: #fff;
     height: 0.8rem;
 }
+#swiper .swiper-tab{
+    position: relative;
+}
+/*日历插件*/
+.attendKing .gearDate{
+    top:3.14rem;
+}
+.attendKing .date_ctrl {
+    top:0;
+}
+/*日历插件*/
 .attendKing .swiper-item {
     text-align: right;
     line-height: 0.8rem;
@@ -539,6 +550,7 @@ body{
 .attendKing .swiper-item .month{
     margin-left: 1rem;
     padding-left: 0.4rem;
+    display: none;
 }
 .attendKing .swiper-item a{
     font-size: 0.2rem;

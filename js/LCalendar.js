@@ -39,6 +39,7 @@ window.LCalendar = (function() {
         },
         bindEvent: function(type) {
             var _self = this;
+            var swiperTab=document.getElementById('swiper-tab'); //LCG
             //呼出日期插件
             function popupDate(e) {
                 _self.gearDate = document.createElement("div");
@@ -116,10 +117,6 @@ window.LCalendar = (function() {
                 _self.gearDate = document.createElement("div");
                 _self.gearDate.className = "gearDate";
                 _self.gearDate.innerHTML = '<div class="date_ctrl slideInUp">' +
-                    '<div class="date_btn_box">' +
-                    '<div class="date_btn lcalendar_cancel">取消</div>' +
-                    '<div class="date_btn lcalendar_finish">确定</div>' +
-                    '</div>' +
                     '<div class="date_roll_mask">' +
                     '<div class="ym_roll">' +
                     '<div>' +
@@ -136,8 +133,13 @@ window.LCalendar = (function() {
                     '</div>' +
                     '</div>' +
                     '</div>' +
+                    '<div class="date_btn_box">' +
+                    '<div class="date_btn lcalendar_cancel">取消</div>' +
+                    '<div class="date_btn lcalendar_finish">确定</div>' +
+                    '</div>' +
                     '</div>';
-                document.body.appendChild(_self.gearDate);
+                // document.body.appendChild(_self.gearDate); //LCG
+                swiperTab.appendChild(_self.gearDate);  //LCG
                 ymCtrlInit();
                 var lcalendar_cancel = _self.gearDate.querySelector(".lcalendar_cancel");
                 lcalendar_cancel.addEventListener('touchstart', closeMobileCalendar);
@@ -682,7 +684,8 @@ window.LCalendar = (function() {
                     evt.initEvent('input', true, true);
                 }
                 _self.trigger.dispatchEvent(evt);
-                document.body.removeChild(_self.gearDate);
+                // document.body.removeChild(_self.gearDate);   //LCG
+                swiperTab.removeChild(_self.gearDate);   //LCG
                 _self.gearDate=null;
             }
 
@@ -707,7 +710,7 @@ window.LCalendar = (function() {
                 // _self.trigger.value = (date_yy % passY + _self.minY) + "/" + date_mm;    //LCG
                 closeMobileCalendar(e);
                 $(".month").find('i').removeClass('arrow');
-                console.log(date_mm)
+                console.log(date_mm)     //LCG
             }
             //日期时间确认
             function finishMobileDateTime(e) {
