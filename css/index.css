@@ -575,9 +575,11 @@ body{
 }
 .attendKing .swiper-item .date{
     width: 0.5rem;
-    margin-top: 0.25rem;
-    padding-right: 0.05rem;
+    /*margin-top: 0.25rem;*/
+    height: 0.8rem;
+    line-height: 0.8rem;
     text-align: right;
+    padding-left: 0.3rem;
 }
 .attendKing .swiper-item .arro{
     width:0.1rem;

@@ -39,9 +39,15 @@
 		    		<li class="swiper-item monthRanking flex">
 		    			<span class="monthly">月排名</span>
 		    			<div class="month flex-1 clearfix" id="month">
+		    				<!-- <a href="javascript:;" class="fl">
+			    				<input id="date" class="date fl" type="text" readonly="readonly" />
+			    				<div class="dateValue">
+			    					<p class="fl"></p>
+			    					<i class="arro fl"></i>
+			    				</div>
+		    				</a> -->
 		    				<a href="javascript:;" class="fl">
-			    				<input id="demo1" class="date fl" type="text" readonly="readonly" />
-			    				<p class="fl">月</p>
+			    				<input id="date" class="date fl" type="text" readonly="readonly" />
 			    				<i class="arro fl"></i>
 		    				</a>
 		    				
@@ -147,21 +153,21 @@
 	<script>
 
 	$(function(){
-		var calendar = new LCalendar();
+		var calendar = new lCalendar();
 		calendar.init({
-	        'trigger': '#month', //标签id
+	        'trigger': '#date', //标签id
 	        'type': 'ym', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
 	        'minDate': '1900-1-1', //最小日期
 	        // 'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1), //最大日期
 		});
-			var now=new Date();
-            var yesterday=now.getMonth()+1;
-            $(".date").val(yesterday);
+		var now=new Date();
+        var yesterday=now.getMonth()+1+'月';
+        $(".date").val(yesterday);
 		function toDub(n){
 			return n<10 ? '0'+n : ''+n;
 		} 
-		$(".month").on('touchend',function(){
-			$(this).find('i').addClass('arrow');
+		$("#date").on('touchend',function(){
+			$(this).parent('a').find('i').addClass('arrow');
 		});
 
 
