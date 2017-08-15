@@ -38,18 +38,18 @@
 		    		</li>
 		    		<li class="swiper-item monthRanking flex">
 		    			<span class="monthly">月排名</span>
-		    			<div class="month flex-1 clearfix" id="month">
-		    				<!-- <a href="javascript:;" class="fl">
-			    				<input id="date" class="date fl" type="text" readonly="readonly" />
-			    				<div class="dateValue">
-			    					<p class="fl"></p>
+		    			<div class="month flex-1" id="month">
+		    				<a href="javascript:;">
+			    				<input id="date" class="date" type="text" readonly="readonly" />
+			    				<div class="dateValue clearfix">
+			    					<p class="timeDate fl" id="timeDate"></p>
 			    					<i class="arro fl"></i>
 			    				</div>
-		    				</a> -->
-		    				<a href="javascript:;" class="fl">
+		    				</a>
+		    				<!-- <a href="javascript:;" class="fl">
 			    				<input id="date" class="date fl" type="text" readonly="readonly" />
 			    				<i class="arro fl"></i>
-		    				</a>
+		    				</a> -->
 		    				
 		    			</div>
 		    		</li>
@@ -163,12 +163,13 @@
 		var now=new Date();
         var yesterday=now.getMonth()+1+'月';
         $(".date").val(yesterday);
+        $(".timeDate").html(yesterday);
 		function toDub(n){
 			return n<10 ? '0'+n : ''+n;
 		} 
 		$("#date").on('touchend',function(){
 			$(this).parent('a').find('i').addClass('arrow');
-		});
+		}); 
 
 
 

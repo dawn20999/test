@@ -29,6 +29,7 @@ window.lCalendar = (function() {
         bindEvent: function(type) {
             var _self = this;
             var swiperTab=document.getElementById('swiper-tab'); //+LCG
+            var timeDate=document.getElementById('timeDate'); //+LCG
             //呼出日期插件
             function popupDate(e) {
                 _self.gearDate = document.createElement("div");
@@ -735,9 +736,11 @@ window.lCalendar = (function() {
                 var passY = _self.maxY - _self.minY + 1;
                 var date_yy = parseInt(Math.round(_self.gearDate.querySelector(".date_yy").getAttribute("val")));
                 var date_mm = parseInt(Math.round(_self.gearDate.querySelector(".date_mm").getAttribute("val"))) + 1;
-                date_mm = date_mm > 9 ? date_mm : '0' + date_mm;
+                // date_mm = date_mm > 9 ? date_mm : '0' + date_mm;
                 _self.trigger.value = (date_yy % passY + _self.minY) + "-" + date_mm ;
                 closeMobileCalendar(e);
+                $(".month").find('i').removeClass('arrow');  //LCG+
+                timeDate.innerHTML=date_mm+'月';  //LCG+
                 console.log(_self.trigger.value)
             }
             //日期时间确认

@@ -572,10 +572,38 @@ body{
     font-size: 0.2rem;
     line-height: 0.8rem;
     color:#7b868c;
+    position: relative;
+}
+.attendKing .swiper-item .date{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+.dateValue{
+    padding-left: 0.3rem;
+}
+.attendKing .swiper-item .arro{
+    width:0.1rem;
+    height: 0.06rem;
+    background:url(../images/app_kaoqinpaiming_arrow_down@2x.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: 0.06rem;
+    margin-top:0.36rem;
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+/*.attendKing .swiper-item a{
+    font-size: 0.2rem;
+    line-height: 0.8rem;
+    color:#7b868c;
 }
 .attendKing .swiper-item .date{
     width: 0.5rem;
-    /*margin-top: 0.25rem;*/
     height: 0.8rem;
     line-height: 0.8rem;
     text-align: right;
@@ -590,7 +618,7 @@ body{
     margin-top:0.36rem;
     transition-duration: 0.3s;
     transition-property: all;
-}
+}*/
 .attendKing .swiper-item .arrow{
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
