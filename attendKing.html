@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="css/page_style.css">
 	<link rel="stylesheet" href="css/LCalendar.css">
 	<link rel="stylesheet" href="css/index.css">
-	<script src="js/jquery-1.7.2.min.js"></script>
 	<script src="js/zepto.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/swiper.js"></script>
@@ -40,7 +39,11 @@
 		    		<li class="swiper-item monthRanking flex">
 		    			<span class="monthly">月排名</span>
 		    			<div class="month flex-1 clearfix" id="month">
-		    				<a href="javascript:;" class="fl"><input id="demo1" class="date fl" type="text" readonly="readonly" /><i class="arro fl"></i></a>
+		    				<a href="javascript:;" class="fl">
+			    				<input id="demo1" class="date fl" type="text" readonly="readonly" />
+			    				<p class="fl">月</p>
+			    				<i class="arro fl"></i>
+		    				</a>
 		    				
 		    			</div>
 		    		</li>
@@ -149,10 +152,10 @@
 	        'trigger': '#demo1', //标签id
 	        'type': 'ym', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
 	        'minDate': '1900-1-1', //最小日期
-	        'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1), //最大日期
+	        // 'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1), //最大日期
 		});
 			var now=new Date();
-            var yesterday=now.getMonth()+1+'月';
+            var yesterday=now.getMonth()+1;
             $(".date").val(yesterday);
 		function toDub(n){
 			return n<10 ? '0'+n : ''+n;
@@ -182,7 +185,6 @@
 					$("#workHours").html(str);
 					$(".month").hide();
 				}
-//				return;
 	        }
 	    });
 

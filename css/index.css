@@ -521,10 +521,27 @@ body{
 }
 /*日历插件*/
 .attendKing .gearDate{
-    top:3.14rem;
+    background-color: rgba(0,0,0,0);
 }
 .attendKing .date_ctrl {
-    top:0;
+    top:3.14rem;
+    background-color: rgba(0,0,0,0.5);
+}
+.attendKing .mask{
+        -webkit-mask: -webkit-gradient(linear, 0% 40%, 0% 0%, from(#debb47), to(rgba(36, 142, 36, 0)));
+    -webkit-mask: -webkit-linear-gradient(bottom, #debb47 40%, rgba(36, 142, 36, 0));
+}
+.attendKing .date_btn_box{
+    background-color: #fff;
+}
+.attendKing .lcalendar_cancel{
+    color:#596365;
+}
+.attendKing .date_roll_mask{ /*s*/
+    background: #fff;
+}
+.attendKing .ym_roll {
+    background: #fff;
 }
 /*日历插件*/
 .attendKing .swiper-item {
@@ -549,16 +566,17 @@ body{
 }
 .attendKing .swiper-item .month{
     margin-left: 1rem;
-    padding-left: 0.4rem;
     display: none;
 }
 .attendKing .swiper-item a{
     font-size: 0.2rem;
+    line-height: 0.8rem;
     color:#7b868c;
 }
 .attendKing .swiper-item .date{
     width: 0.5rem;
-    margin-top: 0.24rem;
+    margin-top: 0.25rem;
+    padding-right: 0.05rem;
     text-align: right;
 }
 .attendKing .swiper-item .arro{

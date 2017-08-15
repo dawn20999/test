@@ -118,6 +118,7 @@ window.LCalendar = (function() {
                 _self.gearDate.className = "gearDate";
                 _self.gearDate.innerHTML = '<div class="date_ctrl slideInUp">' +
                     '<div class="date_roll_mask">' +
+                    '<div class="mask">'+
                     '<div class="ym_roll">' +
                     '<div>' +
                     '<div class="gear date_yy" data-datetype="date_yy"></div>' +
@@ -129,6 +130,7 @@ window.LCalendar = (function() {
                     '<div class="gear date_mm" data-datetype="date_mm"></div>' +
                     '<div class="date_grid">' +
                     '<div>月</div>' +
+                    '</div>' +
                     '</div>' +
                     '</div>' +
                     '</div>' +
@@ -706,11 +708,13 @@ window.LCalendar = (function() {
                 var date_yy = parseInt(Math.round(_self.gearDate.querySelector(".date_yy").getAttribute("val")));
                 var date_mm = parseInt(Math.round(_self.gearDate.querySelector(".date_mm").getAttribute("val"))) + 1;
                 // date_mm = date_mm > 9 ? date_mm : '0' + date_mm;  //LCG
-                _self.trigger.value =date_mm+'月';   //LCG
+                _self.trigger.value =date_mm;   //+LCG
                 // _self.trigger.value = (date_yy % passY + _self.minY) + "/" + date_mm;    //LCG
                 closeMobileCalendar(e);
-                $(".month").find('i').removeClass('arrow');
-                console.log(date_mm)     //LCG
+                $(".month").find('i').removeClass('arrow');   //+LCG
+                // console.log((date_yy % passY + _self.minY),date_mm);     //LCG
+                // console.log(_self.trigger.value)
+                return;
             }
             //日期时间确认
             function finishMobileDateTime(e) {
