@@ -719,6 +719,7 @@ window.lCalendar = (function() {
                 _self.trigger.dispatchEvent(evt);
 //                document.body.removeChild(_self.gearDate);   //LCG
                  swiperTab.removeChild(_self.gearDate);   //+LCG
+                $(".month").find('i').removeClass('arrow');  //LCG+
             }
             //日期确认
             function finishMobileDate(e) {
