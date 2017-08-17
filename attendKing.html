@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="css/LCalendar.css">
 	<link rel="stylesheet" href="css/index.css">
 	<script src="js/zepto.js"></script>
+	<script src="js/fastclick.min.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/swiper.js"></script>
 	<script src="js/LCalendar.js"></script>
@@ -158,6 +159,8 @@
 	<script>
 
 	$(function(){
+		//点透事件
+    FastClick.attach(document.body);
 		var calendar = new lCalendar();
 		calendar.init({
 	        'trigger': '#date', //标签id
@@ -175,8 +178,6 @@
 		$("#date").on('touchend',function(){
 			$(this).parent('a').find('i').addClass('arrow');
 		}); 
-
-
 
 
 	    var swiper = new Swiper('.swiper-container', {
