@@ -28,5 +28,10 @@ if (document.addEventListener) {
 //       })(window,document);
 
 
+//点透事件
+$(function(){
+	FastClick.attach(document.body);
+});
+	    
 
 

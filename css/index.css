@@ -414,6 +414,7 @@ body{
     font-style: italic;
     margin-right: 0.24rem;
     padding-left: 0.22rem;
+    text-align: left;
 }
 .pub_icon{
     width: 0.8rem;
@@ -562,7 +563,7 @@ body{
     background-color: rgba(0,0,0,0);
 }
 .attendKing .date_ctrl {
-    top:3.7rem;  /*3.14rem*/
+    top:3.7rem;  
     background-color: rgba(0,0,0,0.7);
 }
 .attendKing .mask{
@@ -610,7 +611,7 @@ body{
     font-size: 0.28rem;
     color:#596266;
     line-height: 0.9rem;
-    padding-bottom: 0.26rem;
+    padding-bottom: 0.25rem;
     font-weight: bold;
 }
 .attendKing .swiper-item .week{

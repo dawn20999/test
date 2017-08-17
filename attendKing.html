@@ -110,7 +110,7 @@
 		            </div>
 		            <div class="swiper-slide">
 			        	<ul class="swiperList">
-			        		<li class="pub_item pub_listAttend">
+			        		<li class="pub_item">
 			        			<div class="pub_itemMessage flex">
 			        				<i class="pub_number1"></i>
 			        				<div class="pub_icon">
@@ -140,7 +140,7 @@
 			        				<span class="pub_time">98<i class="pub_small">小时</i></span>
 			        			</div>
 			        		</li>
-			        		<li class="pub_item">
+			        		<li class="pub_item pub_listAttend">
 			        			<div class="pub_itemMessage flex">
 			        				<i class="pub_number">4</i>
 			        				<div class="pub_icon">
@@ -159,8 +159,6 @@
 	<script>
 
 	$(function(){
-		//点透事件
-    FastClick.attach(document.body);
 		var calendar = new lCalendar();
 		calendar.init({
 	        'trigger': '#date', //标签id
