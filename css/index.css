@@ -276,9 +276,11 @@ body{
     width: 100%;
     height: 100%;
 }
+.enterprise header{
+    height: 1.6rem;
+}
 .enterprise .header{
-    height: 0.95rem;
-    padding-top: 0.6rem;
+    padding-top: 0.5rem;
     position: relative;
     float: left;
     left: 50%;
@@ -290,34 +292,41 @@ body{
     left: -50%;
 }
 .enterprise .company{
-    font-size: 0.2rem;
+    font-size: 0.22rem;
     color:#fff;
     background:#229ee6;
     max-width: 6rem;
     margin:0 auto;
     padding:0.1rem 0.32rem 0.1rem;
-    box-shadow: -0.05rem 0  0.07rem #d5ecfa,
-                0 -0.05rem  0.07rem #d5ecfa,
-                0.05rem 0  0.07rem #d5ecfa,
-                0 0.05rem  0.07rem #d5ecfa;
-    /*border-radius: 0.2rem;*/
+    -webkit-box-shadow: -0.05rem 0  0.1rem rgba(0,145,229,0.3),
+                0 -0.05rem  0.1rem rgba(0,145,229,0.3),
+                0.05rem 0  0.1rem rgba(0,145,229,0.3),
+                0 0.05rem 0.1rem rgba(0,145,229,0.3);
+    -moz-box-shadow: -0.05rem 0  0.1rem rgba(0,145,229,0.3),
+                0 -0.05rem  0.1rem rgba(0,145,229,0.3),
+                0.05rem 0  0.1rem rgba(0,145,229,0.3),
+                0 0.05rem 0.1rem rgba(0,145,229,0.3);
+    box-shadow: -0.05rem 0  0.1rem rgba(0,145,229,0.3),
+                0 -0.05rem  0.1rem rgba(0,145,229,0.3),
+                0.05rem 0  0.1rem rgba(0,145,229,0.3),
+                0 0.05rem 0.1rem rgba(0,145,229,0.3);
 }
 .enterprise .grid{
     width: 100%;
 }
 .enterprise .gridCont{
     border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
 }
 .enterprise .item{
     width:33%;
     text-align: center;
     float: left;
     border-right: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding-top:26%;
+    padding-top:25%;
     position: relative;
 }
 .enterprise .itemBox{
@@ -330,8 +339,9 @@ body{
 .enterprise .itemBox i{
     width: 0.6rem;
     height: 0.6rem;
-    display: inline-block;
-    margin-top: 0.37rem;
+    display: block;
+    margin:0 auto;
+    margin-top: 0.36rem;
 }
 .enterprise .td_icon{
     background:url(../images/app_today.png) no-repeat;
@@ -353,25 +363,100 @@ body{
     border-bottom: none;
 }
 .enterprise .itemTitle{
-    font-size: 0.22rem;
-    color:#6d7b7e;
-    padding-top: 0.1rem;
+    font-size: 0.24rem;
+    color:#6f7a80;
+    margin-top: 0.22rem;
 }
-
-/*today.html*/
-
-.today .list{
-    margin-top: 0.2rem;
-    margin-bottom: 1.4rem;
-}
-.today .item{
-    padding:0 0.4rem;
+/*列表公共样式开始*/
+.pub_item{
+    padding:0 0 0 0.36rem;
     background:#fff;
 }
-.today .itemMessage{
+.pub_itemMessage{
     height: 1.39rem;
     line-height: 1.39rem;
     border-bottom: 1px solid #f5f5f5;
+    padding-right: 0.9rem
+}
+.pub_number1{
+    width:0.6rem;
+    height: 0.6rem;
+    background:url(../images/app_no-1.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.4rem;
+    margin-right: 0.24rem;
+}
+.pub_number2{
+    width:0.6rem;
+    height: 0.6rem;
+    background:url(../images/app_no-2.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.4rem;
+    margin-right: 0.24rem;
+}
+.pub_number3{
+    width:0.6rem;
+    height: 0.6rem;
+    background:url(../images/app_no-3.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0.4rem;
+    margin-right: 0.24rem;
+}
+.pub_number{
+    display: block;
+    width: 0.38rem;
+    color:#7a868d;
+    font-size: 0.32rem;
+    font-style: italic;
+    margin-right: 0.24rem;
+    padding-left: 0.22rem;
+}
+.pub_icon{
+    width: 0.8rem;
+    height: 0.8rem;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+    position: relative;
+}
+.pub_icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.pub_name{
+    color:#43494d;
+    font-size: 0.32rem;
+    font-weight: bold;
+}
+.pub_time{
+    color:#7a868d;
+    font-size: 0.32rem;
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+    -webkit-flex:1;
+    -ms-flex:1;
+    flex:1;
+    text-align: right;
+}
+.pub_small{
+    font-size: 0.2rem;
+}
+.pub_listAttend{
+    background:#f5fafc;
+}
+/*列表公共样式结束*/
+
+
+/*today.html*/
+.today .list{
+    margin-top: 0.2rem;
+    margin-bottom: 1.4rem;
 }
 .today .myMessage{
     position: fixed;
@@ -380,85 +465,35 @@ body{
     width: 100%;
 }
 .today .myAttend{
-    height: 1.39rem;
-    line-height: 1.39rem;
     background:#229ee6;
-    padding:0 0.4rem;
+    padding-left: 0.36rem;
+    -webkit-box-shadow: 0 -0.05rem  0.1rem rgba(0,145,229,0.3);
+    -moz-box-shadow: 0 -0.05rem  0.1rem rgba(0,145,229,0.3);
+    box-shadow: 0 -0.05rem  0.1rem rgba(0,145,229,0.3);
 }
-.today .myAttend .name{
+.today .myMessage .attendMessage{
+    padding-left: 0.58rem;
+}
+.today .attendMessage p{
+    height: 1.4rem;
+    line-height: 1.4rem;
+    color: #fff;
+    font-size: 0.32rem;
+    font-weight: bold;
+}
+.today .myItemMessage{
+    height: 1.4rem;
+    line-height: 1.4rem;
+    padding-right: 0.9rem;
+}
+.today .myAttend .pub_name{
     color:#fff;
 }
-.today .myAttend .number{
+.today .myAttend .pub_number{
     color:#fff;
 }
-.today .myAttend .time{
+.today .myAttend .pub_time{
     color:#fff;
-}
-.today .number1{
-    width:0.6rem;
-    height: 0.6rem;
-    background:url(../images/app_no-1.png) no-repeat;
-    background-size: 100% 100%;
-    margin-top: 0.42rem;
-    margin-right: 0.34rem;
-}
-.today .number2{
-    width:0.6rem;
-    height: 0.6rem;
-    background:url(../images/app_no-2.png) no-repeat;
-    background-size: 100% 100%;
-    margin-top: 0.42rem;
-    margin-right: 0.34rem;
-}
-.today .number3{
-    width:0.6rem;
-    height: 0.6rem;
-    background:url(../images/app_no-3.png) no-repeat;
-    background-size: 100% 100%;
-    margin-top: 0.42rem;
-    margin-right: 0.34rem;
-}
-.today .number{
-    color:#78858b;
-    font-size: 0.3rem;
-    font-style: italic;
-    margin-right: 0.47rem;
-    padding-left: 0.2rem;
-}
-.today .icon{
-    width: 0.8rem;
-    height: 0.8rem;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
-    margin-top: 0.3rem;
-    position: relative;
-}
-.today .icon img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-}
-.today .name{
-    color:#596266;
-    font-size: 0.3rem;
-    margin-left: 0.3rem;
-}
-.today .time{
-    color:#596266;
-    font-size: 0.24rem;
-    -webkit-box-flex:1;
-    -moz-box-flex:1;
-    -webkit-flex:1;
-    -ms-flex:1;
-    flex:1;
-    text-align: right;
-}
-.today .listAttend{
-    background:#f5fafd;
 }
 
 
@@ -466,13 +501,13 @@ body{
 /*attendKing.html*/
 .attendKing .header{
     width: 100%;
-    height: 2.34rem;
+    height: 2.6rem;   /*2.34rem*/
     background:url(../images/app_kaoqinpaiming_bg@2x.png) no-repeat;
     background-size: 100% 100%; 
 }
 .attendKing .userName{
     padding-top: 0.05rem;
-    padding-left: 0.2rem;
+    padding-left: 0.6rem;
 }
 .attendKing .nameIcon{
     display: inline-block;
@@ -480,25 +515,26 @@ body{
     height: 0.5rem;
 }
 .attendKing .myName{
-    font-size: 0.24rem;
+    font-size: 0.28rem;
     color:#fff;
-    margin-top: 0.1rem;
     padding-left: 0.2rem;
+    font-weight: bold;
+    line-height: 0.5rem;
 }
 .attendKing .explain{
     padding-top: 0.3rem;
-    padding-left: 0.2rem;
-    color:#b3e1fb;
-    font-size: 0.2rem;
+    padding-left: 0.6rem;
+    color:#b3e1fc;
+    font-size: 0.22rem;
 }
 .attendKing .workHours{
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     color:#fff;
     padding-top: 0.3rem;
-    padding-left: 0.2rem;
+    padding-left: 0.6rem;
 }
 .attendKing .workHours span{
-    font-size: 0.2rem;
+    font-size: 0.22rem;
 }
 .attendKing .userName{
     
@@ -514,17 +550,17 @@ body{
     top:0;
     bottom: 0;
     background: #fff;
-    height: 0.8rem;
+    height: 0.9rem;
 }
 #swiper .swiper-tab{
     position: relative;
 }
-/*日历插件*/
+/*日历插件开始*/
 .attendKing .gearDate{
     background-color: rgba(0,0,0,0);
 }
 .attendKing .date_ctrl {
-    top:3.14rem;
+    top:3.5rem;  /*3.14rem*/
     background-color: rgba(0,0,0,0.5);
 }
 .attendKing .mask{
@@ -543,98 +579,90 @@ body{
 .attendKing .ym_roll {
     background: #fff;
 }
-/*日历插件*/
+/*日历插件结束*/
 .attendKing .swiper-item {
     text-align: right;
-    line-height: 0.8rem;
     opacity: 1;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,1);
     -webkit-flex:1;
     -webkit-box-flex:1;
     -moz-flex:1;
     -ms-flex:1;
     flex:1;
     width:100%;
-    height: 0.8rem;
+    height: 0.9rem;
 }
 .attendKing .swiper-list .monthRanking{
     text-align: left;
 }
-.attendKing .swiper-item span{
-    font-size: 0.3rem;
-    color:#596365;
+.attendKing .weekTime{
+    margin-left: 1.7rem;
 }
-.attendKing .swiper-item .month{
-    margin-left: 1rem;
-    display: none;
+.attendKing .monthTime{
+    padding-right: 0.5rem;
 }
-.attendKing .swiper-item a{
-    font-size: 0.2rem;
-    line-height: 0.8rem;
-    color:#7b868c;
-    position: relative;
-}
-.attendKing .swiper-item .date{
-    height: 0.8rem;
-    line-height: 0.8rem;
-    text-align: right;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    opacity: 0;
-}
-.dateValue{
-    padding-left: 0.3rem;
-}
-.attendKing .swiper-item .arro{
-    width:0.1rem;
-    height: 0.06rem;
-    background:url(../images/app_kaoqinpaiming_arrow_down@2x.png) no-repeat;
-    background-size: 100% 100%;
-    margin-left: 0.06rem;
-    margin-top:0.36rem;
-    transition-duration: 0.3s;
-    transition-property: all;
-}
-/*.attendKing .swiper-item a{
-    font-size: 0.2rem;
-    line-height: 0.8rem;
-    color:#7b868c;
-}
-.attendKing .swiper-item .date{
-    width: 0.5rem;
-    height: 0.8rem;
-    line-height: 0.8rem;
-    text-align: right;
-    padding-left: 0.3rem;
-}
-.attendKing .swiper-item .arro{
-    width:0.1rem;
-    height: 0.06rem;
-    background:url(../images/app_kaoqinpaiming_arrow_down@2x.png) no-repeat;
-    background-size: 100% 100%;
-    margin-left: 0.04rem;
-    margin-top:0.36rem;
-    transition-duration: 0.3s;
-    transition-property: all;
-}*/
-.attendKing .swiper-item .arrow{
-    -webkit-transform: rotate(-180deg);
-    -moz-transform: rotate(-180deg);
-    transform: rotate(-180deg);
+.attendKing .itemTime span{
+    font-size: 0.28rem;
+    color:#596266;
+    line-height: 0.9rem;
+    padding-bottom: 0.26rem;
+    font-weight: bold;
 }
 .attendKing .swiper-item .week{
     margin-right: 0.65rem;
-    padding-bottom: 0.2rem;
 }
 .attendKing .swiper-item .monthly{
     margin-left: 0.65rem;
 }
 .attendKing .swiper-item .active {
     color:#229ee6;
-    border-bottom:2px solid #007aff;
-    padding-bottom: 0.2rem;
+    border-bottom:0.04rem solid #229ee6;
+}
+.attendKing .swiper-item .month{
+    display: none;
+    margin-left: 0.3rem;
+}
+.attendKing .month a{
+    position: relative;
+}
+.attendKing .swiper-item .date{
+    height: 0.9rem;
+    line-height: 0.9rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+.attendKing .dateValue{
+    padding-left: 0.2rem;
+}
+.attendKing .timeDate{
+    font-size: 0.22rem;
+    line-height: 0.9rem;
+    color:#7a868d;
+    width: 0.53rem;
+    text-align: right;
+}
+.attendKing .arrowIcon{
+    margin-left: 0.06rem;
+    margin-top:0.38rem;
+    width:0.1rem;
+    height: 0.1rem;
+}
+.attendKing .swiper-item .arro{
+    width:0.1rem;
+    height: 0.1rem;
+    background:url(../images/app_kaoqinpaiming_arrow_down@2x.png) no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+.attendKing .swiper-item .arrow{
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 .swiper-container {
     width: 100%;
@@ -662,82 +690,5 @@ body{
 }
 .attendKing .swiperList{
     width: 100%;
-}
-.attendKing .slidItem{
-    padding:0 0.4rem;
-}
-.attendKing .itemMessage{
-    height: 1.39rem;
-    line-height: 1.39rem;
-    border-bottom: 1px solid #f5f5f5;
-}
-.attendKing .number1{
-    width:0.6rem;
-    height: 0.6rem;
-    background:url(../images/app_no-1.png) no-repeat;
-    background-size: 100% 100%;
-    margin-top: 0.42rem;
-    margin-right: 0.34rem;
-}
-.attendKing .number2{
-    width:0.6rem;
-    height: 0.6rem;
-    background:url(../images/app_no-2.png) no-repeat;
-    background-size: 100% 100%;
-    margin-top: 0.42rem;
-    margin-right: 0.34rem;
-}
-.attendKing .number3{
-    width:0.6rem;
-    height: 0.6rem;
-    background:url(../images/app_no-3.png) no-repeat;
-    background-size: 100% 100%;
-    margin-top: 0.42rem;
-    margin-right: 0.34rem;
-}
-.attendKing .number{
-    color:#78858b;
-    font-size: 0.3rem;
-    font-style: italic;
-    margin-right: 0.47rem;
-    padding-left: 0.2rem;
-}
-.attendKing .icon {
-    width: 0.8rem;
-    height: 0.8rem;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    margin-top: 0.3rem;
-    position: relative;
-}
-.attendKing .icon img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-}
-.attendKing .name{
-    color:#596266;
-    font-size: 0.3rem;
-    margin-left: 0.3rem;
-}
-.attendKing .time{
-    color:#596266;
-    font-size: 0.24rem;
-    -webkit-box-flex:1;
-    -moz-box-flex:1;
-    -webkit-flex:1;
-    -ms-flex:1;
-    flex:1;
-    text-align: right;
-}
-.attendKing .time .small{
-    font-size: 0.2rem;
-}
-.attendKing .listAttend{
-    background:#f5fafd;
 }
 
