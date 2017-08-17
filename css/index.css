@@ -515,18 +515,18 @@ body{
 }
 .attendKing .nameIcon{
     display: inline-block;
-    width:0.5rem;
-    height: 0.5rem;
+    width:0.8rem;
+    height: 0.8rem;
 }
 .attendKing .myName{
-    font-size: 0.28rem;
+    font-size: 0.32rem;
     color:#fff;
     padding-left: 0.2rem;
     font-weight: bold;
-    line-height: 0.5rem;
+    line-height: 0.8rem;
 }
 .attendKing .explain{
-    padding-top: 0.8rem;
+    padding-top: 0.4rem;
     padding-left: 0.6rem;
     color:#b3e1fc;
     font-size: 0.22rem;
@@ -534,7 +534,7 @@ body{
 .attendKing .workHours{
     font-size: 1.1rem;
     color:#fff;
-    padding-top: 0.2rem;
+    padding-top: 0.1rem;
     padding-left: 0.6rem;
 }
 .attendKing .workHours span{
