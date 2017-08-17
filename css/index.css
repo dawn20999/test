@@ -418,6 +418,7 @@ body{
 .pub_icon{
     width: 0.8rem;
     height: 0.8rem;
+    overflow: hidden;
     -webkit-border-radius:50%;
     -moz-border-radius:50%;
     border-radius:50%;
