@@ -505,34 +505,34 @@ body{
 /*attendKing.html*/
 .attendKing .header{
     width: 100%;
-    height: 3.6rem;   /*2.6rem*/
-    background:url(../images/app_kaoqinpaiming_bg@2x.png) no-repeat;
+    height: 2.8rem;   /*2.6rem*/
+    background:url(../images/kaoqinpaiming_bg@2x.png) no-repeat;
     background-size: 100% 100%; 
 }
 .attendKing .userName{
-    padding-top: 0.5rem;
+    padding-top: 0.3rem;
     padding-left: 0.6rem;
 }
 .attendKing .nameIcon{
     display: inline-block;
-    width:0.8rem;
-    height: 0.8rem;
+    width:0.6rem;
+    height: 0.6rem;
 }
 .attendKing .myName{
-    font-size: 0.32rem;
+    font-size: 0.3rem;
     color:#fff;
     padding-left: 0.2rem;
     font-weight: bold;
-    line-height: 0.8rem;
+    line-height: 0.6rem;
 }
 .attendKing .explain{
-    padding-top: 0.4rem;
+    padding-top: 0.2rem;
     padding-left: 0.6rem;
     color:#b3e1fc;
     font-size: 0.22rem;
 }
 .attendKing .workHours{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color:#fff;
     padding-top: 0.1rem;
     padding-left: 0.6rem;
@@ -609,7 +609,7 @@ body{
     font-size: 0.28rem;
     color:#596266;
     line-height: 0.9rem;
-    padding-bottom: 0.265rem;
+    padding-bottom: 0.26rem;
     font-weight: bold;
 }
 .attendKing .swiper-item .week{
@@ -620,7 +620,7 @@ body{
 }
 .attendKing .swiper-item .active {
     color:#229ee6;
-    border-bottom:0.04rem solid #229ee6;
+    border-bottom:0.06rem solid #229ee6;
 }
 .attendKing .swiper-item .month{
     display: none;
