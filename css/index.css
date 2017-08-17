@@ -526,7 +526,7 @@ body{
     line-height: 0.6rem;
 }
 .attendKing .explain{
-    padding-top: 0.2rem;
+    padding-top: 0.25rem;
     padding-left: 0.6rem;
     color:#b3e1fc;
     font-size: 0.22rem;
@@ -534,7 +534,7 @@ body{
 .attendKing .workHours{
     font-size: 1rem;
     color:#fff;
-    padding-top: 0.1rem;
+    padding-top: 0.05rem;
     padding-left: 0.6rem;
 }
 .attendKing .workHours span{
@@ -561,7 +561,7 @@ body{
     background-color: rgba(0,0,0,0);
 }
 .attendKing .date_ctrl {
-    top:3.5rem;  /*3.14rem*/
+    top:3.7rem;  /*3.14rem*/
     background-color: rgba(0,0,0,0.7);
 }
 .attendKing .mask{

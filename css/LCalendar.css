@@ -149,12 +149,14 @@
 
 .ym_roll>div .date_grid>div,
 .time_roll>div .date_grid>div {
-    right: 5em
+    /*right: 5em*/  /*LCG*/
+    right: 6em    /*LCG+*/
 }
 
 .date_btn {
     color: #0575f2;
     font-size: 1.2em;
+    font-weight: bold;
     line-height: 1em;
     text-align: center;
     padding: 1.6em 3em
@@ -235,5 +237,6 @@
 .tooth {
     height: 2em;
     line-height: 2em;
-    text-align: center
+    text-align: center;
+    padding-left: 0.6rem;   /*LCG+*/
 }
