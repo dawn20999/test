@@ -150,7 +150,7 @@
 .ym_roll>div .date_grid>div,
 .time_roll>div .date_grid>div {
     /*right: 5em*/  /*LCG*/
-    right: 6em    /*LCG+*/
+    right: 5.5em    /*LCG+*/
 }
 
 .date_btn {
