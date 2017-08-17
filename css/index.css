@@ -561,7 +561,7 @@ body{
 }
 .attendKing .date_ctrl {
     top:3.5rem;  /*3.14rem*/
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
 }
 .attendKing .mask{
         -webkit-mask: -webkit-gradient(linear, 0% 40%, 0% 0%, from(#debb47), to(rgba(36, 142, 36, 0)));
@@ -570,8 +570,11 @@ body{
 .attendKing .date_btn_box{
     background-color: #fff;
 }
+.attendking .date_btn{
+    color:#229ee6;
+}
 .attendKing .lcalendar_cancel{
-    color:#596365;
+    color:#7a868d;
 }
 .attendKing .date_roll_mask{ /*s*/
     background: #fff;
@@ -605,7 +608,7 @@ body{
     font-size: 0.28rem;
     color:#596266;
     line-height: 0.9rem;
-    padding-bottom: 0.26rem;
+    padding-bottom: 0.265rem;
     font-weight: bold;
 }
 .attendKing .swiper-item .week{
