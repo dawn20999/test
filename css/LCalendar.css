@@ -154,12 +154,12 @@
 }
 
 .date_btn {
-    color: #0575f2;
-    font-size: 1.2em;
+    color: #229ee6;
+    font-size: 1.4em;
     font-weight: bold;
     line-height: 1em;
     text-align: center;
-    padding: 1.6em 3em
+    padding: 1.4em 3em
 }
 
 .date_btn_box:before,
