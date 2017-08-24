@@ -719,7 +719,7 @@ window.lCalendar = (function() {
                 _self.trigger.dispatchEvent(evt);
 //                document.body.removeChild(_self.gearDate);   //LCG
                  swiperTab.removeChild(_self.gearDate);   //+LCG
-                $(".month").find('.arrowIcon').removeClass('arrow');  //LCG+
+                $(".month").find('i').removeClass('arrow');  //LCG+
             }
             //日期确认
             function finishMobileDate(e) {
@@ -740,7 +740,7 @@ window.lCalendar = (function() {
                 // date_mm = date_mm > 9 ? date_mm : '0' + date_mm;
                 _self.trigger.value = (date_yy % passY + _self.minY) + "-" + date_mm ;
                 closeMobileCalendar(e);
-                $(".month").find('.arrowIcon').removeClass('arrow');  //LCG+
+                $(".month").find('i').removeClass('arrow');  //LCG+
                 timeDate.innerHTML=date_mm+'月';  //LCG+
                 console.log(_self.trigger.value)
             }

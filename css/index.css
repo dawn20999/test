@@ -649,13 +649,13 @@ body{
     color:#7a868d;
     width: 0.53rem;
     text-align: right;
-    margin-right: 0.08rem;
+    margin-right: 0.06rem;
 }
 .attendKing .arrowIcon{
     margin-top:0.38rem;
     width:0.1rem;
     height: 0.1rem;
-    transition:transform 0.4s linear 0s;
+    /*background: red;*/
 }
 .attendKing .swiper-item .arro{
     width:0.1rem;
@@ -663,13 +663,14 @@ body{
     background:url(../images/app_kaoqinpaiming_arrow_down@2x.png) no-repeat;
     background-size: 100% 100%;
     display: block;
+    transition:transform 0.4s linear 0s;
 }
 .attendKing .swiper-item .arrow{
-    -webkit-transform: rotate(180deg);
+    /*-webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
-    transform: rotate(180deg);
-    /*background:url(../images/app_kaoqinpaiming_arrow_up@2x.png) no-repeat;
-    background-size: 100% 100%;*/
+    transform: rotate(180deg);*/
+    background:url(../images/app_kaoqinpaiming_arrow_up@2x.png) no-repeat;
+    background-size: 100% 100%;
 }
 .swiper-container {
     width: 100%;
